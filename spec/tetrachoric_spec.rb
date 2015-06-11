@@ -9,9 +9,9 @@ describe "Statsample::Bivariate tetrachoric extensions" do
     Statsample::Bivariate.should respond_to(:tetrachoric)
   end
   it "should return correct tetrachoric_matrix"do
-    ds=Statsample::PlainText.read(@data_file, %w{a b c d e})
+    ds=Daru::DataFrame.from_plaintext(@data_file, [:a, :b, :c, :d, :e])
     tcm_obs=Statsample::Bivariate.tetrachoric_correlation_matrix(ds)
-    tcm_exp=Statsample::PlainText.read(@data_file, %w{a b c d e}).to_matrix
+    tcm_exp=Daru::DataFrame.from_plaintext(@data_file, [:a, :b, :c, :d, :e]).to_matrix
     tcm_obs.row_size.times do |i|
       tcm_obs.column_size do |j|
         tcm_obs[i,j].should be_within( 0.00001).of(tcm_exp[i,k])
@@ -79,8 +79,8 @@ shared_examples_for "tetrachoric implementation" do
     tc.threshold_y.should be_within( 0.0001).of( 0.31864)
   end
   it "should return equal values for dataset and crosstab inputs" do 
-    x=%w{a a a a b b b a b b a a b b}.to_vector
-    y=%w{0 0 1 1 0 0 1 1 1 1 0 0 1 1}.to_vector
+    x = Daru::Vector.new(%w{a a a a b b b a b b a a b b})
+    y = Daru::Vector.new(%w{0 0 1 1 0 0 1 1 1 1 0 0 1 1})
     # crosstab
     #    0    1
     # a  4    3

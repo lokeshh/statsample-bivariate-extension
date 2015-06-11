@@ -9,7 +9,7 @@ module Statsample
     end
     
     # Polychoric correlation matrix.
-    # Order of rows and columns depends on Dataset#fields order
+    # Order of rows and columns depends on DataFrame#vectors order
     def self.polychoric_correlation_matrix(ds)
       cache={}
       matrix=ds.collect_matrix do |row,col|
@@ -30,7 +30,7 @@ module Statsample
         end
       end
       matrix.extend CovariateMatrix
-      matrix.fields=ds.fields
+      matrix.fields=ds.vectors.to_a
       matrix
     end
     

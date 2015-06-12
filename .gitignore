@@ -5,3 +5,4 @@ tmp
 grab_references
 .autotest
 *~
+Gemfile.lock

@@ -1,5 +1,7 @@
 # statsample-bivariate-extension
 
+[![Build Status](https://travis-ci.org/SciRuby/statsample-bivariate-extension.svg)](https://travis-ci.org/SciRuby/statsample-bivariate-extension)
+
 * http://ruby-statsample.rubyforge.org/
 
 ## DESCRIPTION:
@@ -35,16 +37,16 @@ Provides advanced bivariate statistics:
     puts poly.summary
 
 
-== REQUIREMENTS:
+## REQUIREMENTS:
 
 * Statsample
 
-== INSTALL:
+## INSTALL:
 
 This gem is a statsample dependency. If you want to install it separatly
 
-* sudo gem install statsample-bivariate-extension
+* gem install statsample-bivariate-extension
 
-== LICENSE:
+## LICENSE:
 
 BSD 2-Clause (see LICENSE.txt)

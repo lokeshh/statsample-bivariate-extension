@@ -1,4 +1,4 @@
-=== 0.1.2
+=== 1.2.0
 
 * Updated statsample dependency to 1.5.0
 * Added new dependency on daru (0.1.0)

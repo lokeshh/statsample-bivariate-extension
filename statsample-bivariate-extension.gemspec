@@ -23,11 +23,11 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency 'daru', '~> 0.1'
-  spec.add_runtime_dependency 'statsample', '~> 1.5'
+  spec.add_runtime_dependency 'statsample', '~> 2.0'
 
   spec.add_development_dependency 'bundler', '~> 1.10'
-  spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'rake', '~> 10.4'
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'nmatrix', '~> 0.1'
-  spec.add_development_dependency 'gsl-nmatrix', '~> 1.17'
+  spec.add_development_dependency 'rb-gsl', '~> 1.16'
 end

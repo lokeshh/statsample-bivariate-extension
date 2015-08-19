@@ -5,10 +5,10 @@ describe "Statsample::Bivariate polychoric extension" do
       Statsample::Bivariate.should respond_to(:polychoric)
     end
     it "should respond to method polychoric_correlation_matrix" do
-      a=([1,1,2,2,2,3,3,3,2,2,3,3,3]*4).to_scale
-      b=([1,2,2,2,1,3,2,3,2,2,3,3,2]*4).to_scale
-      c=([1,1,1,2,2,2,2,3,2,3,2,2,3]*4).to_scale
-      ds={'a'=>a,'b'=>b,'c'=>c}.to_dataset
+      a = Daru::Vector.new([1,1,2,2,2,3,3,3,2,2,3,3,3]*4)
+      b = Daru::Vector.new([1,2,2,2,1,3,2,3,2,2,3,3,2]*4)
+      c = Daru::Vector.new([1,1,1,2,2,2,2,3,2,3,2,2,3]*4)
+      ds= Daru::DataFrame.new({:a => a,:b => b,:c => c})
       Statsample::Bivariate.polychoric_correlation_matrix(ds).should be_instance_of(::Matrix)
     end
   end

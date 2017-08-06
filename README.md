@@ -2,8 +2,6 @@
 
 [![Build Status](https://travis-ci.org/SciRuby/statsample-bivariate-extension.svg)](https://travis-ci.org/SciRuby/statsample-bivariate-extension)
 
-* http://ruby-statsample.rubyforge.org/
-
 ## DESCRIPTION:
 
 Provides advanced bivariate statistics:

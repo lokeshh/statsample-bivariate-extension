@@ -5,7 +5,6 @@ env:
   - CPLUS_INCLUDE_PATH=/usr/include/atlas C_INCLUDE_PATH=/usr/include/atlas
 
 rvm:
-  - '1.9.3'
   - '2.0'
   - '2.1'
   - '2.2'
